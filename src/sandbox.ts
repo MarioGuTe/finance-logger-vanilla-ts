@@ -77,19 +77,47 @@
 // console.log(mixedExplicitTypes);
 
 // Objects Explicit Types
-let person: object;
-person = { name: "Mario", age: 34 };
+// let person: object;
+// person = { name: "Mario", age: 34 };
 
-let otherPerson: {
-  name: string;
-  age: number;
-  hobby: string;
+// let otherPerson: {
+//   name: string;
+//   age: number;
+//   hobby: string;
+// };
+
+// otherPerson = {
+//   name: "Rodrigo",
+//   age: 30,
+//   hobby: "Gaming",
+// };
+
+// console.log(otherPerson);
+
+// ***Function Basics***
+
+let greet: Function;
+
+greet = () => {
+  console.log("Hello");
 };
 
-otherPerson = {
-  name: "Rodrigo",
-  age: 30,
-  hobby: "Gaming",
+greet();
+
+let sum = (a: number, b: number): number => {
+  return a + b;
 };
 
-console.log(otherPerson.name);
+console.log(sum(2, 2));
+
+// void is the absence of value it happens when a function doesn't have a return value
+let optionalSum = (
+  a: number,
+  b: number,
+  c: number | string = "This is the default optional value"
+): void => {
+  console.log(a + b);
+  console.log(c);
+};
+
+optionalSum(3, 3);
