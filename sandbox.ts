@@ -48,3 +48,48 @@
 // person.skills = "Kung Fu";
 
 // console.log(person.name, person.hobby, person.age);
+
+// *** Explicit Types ***
+// let character: string;
+// let age: number;
+// let isLoggedIn: boolean;
+
+//Works
+// age = 20;
+// Doesn't work
+// isLoggedIn = "Mario";
+
+// Arrays Explicit Types
+// Initialize de data-type of names as an array of strings
+// with the value of an empty array
+// let names: string[] = [];
+
+// names.push("Mario", "Sebastián");
+
+// console.log(names);
+
+// Union Types
+// It's used for mixed data-type arrays up to 3 different data-types
+// let mixedExplicitTypes: (string | number | boolean)[] = [];
+
+// mixedExplicitTypes.push("Mario", 34, true);
+
+// console.log(mixedExplicitTypes);
+
+// Objects Explicit Types
+let person: object;
+person = { name: "Mario", age: 34 };
+
+let otherPerson: {
+  name: string;
+  age: number;
+  hobby: string;
+};
+
+otherPerson = {
+  name: "Rodrigo",
+  age: 30,
+  hobby: "Gaming",
+};
+
+console.log(otherPerson);
