@@ -96,28 +96,40 @@
 
 // ***Function Basics***
 
-let greet: Function;
+// let greet: Function;
 
-greet = () => {
-  console.log("Hello");
+// greet = () => {
+//   console.log("Hello");
+// };
+
+// greet();
+
+// let sum = (a: number, b: number): number => {
+//   return a + b;
+// };
+
+// console.log(sum(2, 2));
+
+// *** void is the absence of value it happens when a function doesn't have a return value
+// let optionalSum = (
+//   a: number,
+//   b: number,
+//   c: number | string = "This is the default optional value"
+// ): void => {
+//   console.log(a + b);
+//   console.log(c);
+// };
+
+// optionalSum(3, 3);
+
+// *** Type Aliases ***
+type StringOrNum = string | number;
+type objWithName = { name: string; uid: StringOrNum };
+
+const logDetails = (uid: StringOrNum, item: string) => {
+  console.log(`${item} has a uid of ${uid}`);
 };
 
-greet();
-
-let sum = (a: number, b: number): number => {
-  return a + b;
+const greet = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
 };
-
-console.log(sum(2, 2));
-
-// void is the absence of value it happens when a function doesn't have a return value
-let optionalSum = (
-  a: number,
-  b: number,
-  c: number | string = "This is the default optional value"
-): void => {
-  console.log(a + b);
-  console.log(c);
-};
-
-optionalSum(3, 3);
