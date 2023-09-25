@@ -100,7 +100,7 @@
 // const greetAgain = (user: objWithName) => {
 //   console.log(`${user.name} says hello`);
 // };
-// *** Function Signatures ***
+// *** Function Signatures  Examples***
 // let greet: Function;
 // example 1
 let greet;
